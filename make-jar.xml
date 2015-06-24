@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Kafka-sample with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/Users/avergara/Documents/github/kakfa-sample/target/kafka-producer.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="cl.orsan.kafka.TestProducer"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ scala-library-2.9.0.jar kafka_2.9.2-0.8.2.1.jar kafka-clients-0.8.2.1.jar scala-reflect-2.10.2.jar scala-library-2.9.0.jar kafka-clients-0.8.2.1.jar slf4j-api-1.7.6.jar lz4-1.2.0.jar snappy-java-1.1.1.6.jar kafka_2.9.2-0.8.1.1.jar metrics-core-2.2.0.jar zookeeper-3.3.4.jar log4j-1.2.15.jar mail-1.4.jar activation-1.1.jar jline-0.9.94.jar junit-3.8.1.jar jopt-simple-3.2.jar zkclient-0.3.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="/Users/avergara/Documents/github/kakfa-sample/target/classes"/>
+            <zipfileset dir="/Users/avergara/Documents/libs" includes="scala-library-2.9.0.jar"/>
+            <zipfileset dir="/Users/avergara/Documents/libs" includes="kafka_2.9.2-0.8.2.1.jar"/>
+            <zipfileset dir="/Users/avergara/Documents/libs" includes="kafka-clients-0.8.2.1.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/org/scala-lang/scala-reflect/2.10.2" includes="scala-reflect-2.10.2.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/org/scala-lang/scala-library/2.9.0" includes="scala-library-2.9.0.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/org/apache/kafka/kafka-clients/0.8.2.1" includes="kafka-clients-0.8.2.1.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/org/slf4j/slf4j-api/1.7.6" includes="slf4j-api-1.7.6.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/net/jpountz/lz4/lz4/1.2.0" includes="lz4-1.2.0.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/org/xerial/snappy/snappy-java/1.1.1.6" includes="snappy-java-1.1.1.6.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/org/apache/kafka/kafka_2.9.2/0.8.1.1" includes="kafka_2.9.2-0.8.1.1.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/com/yammer/metrics/metrics-core/2.2.0" includes="metrics-core-2.2.0.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/org/apache/zookeeper/zookeeper/3.3.4" includes="zookeeper-3.3.4.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/log4j/log4j/1.2.15" includes="log4j-1.2.15.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/javax/mail/mail/1.4" includes="mail-1.4.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/javax/activation/activation/1.1" includes="activation-1.1.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/jline/jline/0.9.94" includes="jline-0.9.94.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/junit/junit/3.8.1" includes="junit-3.8.1.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/net/sf/jopt-simple/jopt-simple/3.2" includes="jopt-simple-3.2.jar"/>
+            <zipfileset dir="/Users/avergara/.m2/repository/com/101tec/zkclient/0.3" includes="zkclient-0.3.jar"/>
+        </jar>
+    </target>
+</project>
